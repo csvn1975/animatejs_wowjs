@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- wow why is not work with cdn!!!-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+
+    <!-- animatejs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      .list-item {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 150px);
+        grid-gap: 20px;
+        background-color: 'skyblue';
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+
+      .item-success {
+        border: 1px solid rgb(91, 91, 253);
+        background-color: rgb(91, 91, 253);
+      }
+
+      .item-danger {
+        border: 1px solid red;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <center>
+      <h1 class="wow animate__shakeX">animate__animated animate style</h1>
+    </center>
+    <div class="list-item">
+      <div class="item item-danger animate__animated animate__bounce">
+        animate__bounce
+      </div>
+      <div class="item item-danger animate__animated animate__heartBeat">
+        animate__heartBeat
+      </div>
+      <div class="item item-danger animate__animated animate__tada">tada</div>
+      <div class="item item-danger"></div>
+      <div class="item item-danger"></div>
+    </div>
+
+    <center>
+      <h1>WOW JS</h1>
+      new WOW().init()
+    </center>
+    ;
+    <div class="list-item">
+      <div class="item item-success wow slideInRight">slideInRight</div>
+      <div class="item item-success wow bounceOut">swing</div>
+      <div
+        class="item item-success wow pulse"
+        data-wow-iteration="infinite"
+        data-wow-duration="1500ms"
+      >
+        pulse data-wow-iteration="infinite" data-wow-duration="1500ms"
+      </div>
+      <div class="item item-success wow fadeInTopRight">new WOW().init();</div>
+      <div class="item item-success wow wobble"></div>
+    </div>
+
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
